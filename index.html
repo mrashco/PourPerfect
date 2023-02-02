@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
     <title>Pour Perfect Coffee Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -14,13 +16,13 @@
             <h1 class="title">Pour Perfect Coffee Calculator</h1>
             <p class="content">PourPerfect is an app that helps coffee enthusiasts achieve the perfect pour-over. It provides a step-by-step guide and a timer to ensure the correct amount of water is added at the right pace for the best tasting coffee. It also has a calculator to help users determine the correct coffee to water ratio for their preferred strength.</p>
             <div class="field">
-                <label class="label">Coffee to Water Ratio (1:10)</label>
+                <label class="label">Coffee to Water Ratio<div class="tooltip"><span class="icon"><i class="fas fa-info-circle"></i></span><span class="tooltiptext">Format e.g. 1:10</span></div></label>
                 <div class="control">
                     <input type="text" class="input" id="ratio" value="1:10">
                 </div>
             </div>
             <div class="field">
-                <label class="label">Coffee Amount (g)</label>
+                <label class="label">Coffee Amount (g)<div class="tooltip"><span class="icon"><i class="fas fa-info-circle"></i></span><span class="tooltiptext">20-30g is recommended</span></div></label>
                 <div class="control">
                     <input type="number" class="input" id="coffeeAmount" value="20">
                 </div>
