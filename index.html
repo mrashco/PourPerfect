@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <title>Pour Perfect Coffee Calculator</title>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Pour Perfect Coffee Calculator</h1>
+            <p class="content">PourPerfect is an app that helps coffee enthusiasts achieve the perfect pour-over. It provides a step-by-step guide and a timer to ensure the correct amount of water is added at the right pace for the best tasting coffee. It also has a calculator to help users determine the correct coffee to water ratio for their preferred strength.</p>
+            <div class="field">
+                <label class="label">Coffee to Water Ratio (1:10)</label>
+                <div class="control">
+                    <input type="text" class="input" id="ratio" value="1:10">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Coffee Amount (g)</label>
+                <div class="control">
+                    <input type="number" class="input" id="coffeeAmount" value="20">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" id="calculateBtn">Calculate</button>
+                </div>
+            </div>
+            <hr>
+            <div class="field">
+                <label class="label">Coffee Amount (g)</label>
+                <div class="control">
+                    <input type="text" class="input" id="coffeeAmountResult" disabled>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Water Amount (mL)</label>
+                <div class="control">
+                    <input type="text" class="input" id="waterAmountResult" disabled>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Milk Amount (mL)</label>
+                <div class="control">
+                    <input type="text" class="input" id="milkAmountResult" disabled>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const calculateBtn = document.querySelector("#calculateBtn");
+        calculateBtn.addEventListener("click", () => {
+            const ratio = document.querySelector("#ratio").value;
+            const ratioArr = ratio.split(":");
+            const coffeeAmount = document.querySelector("#coffeeAmount").value;
+            const coffeeRatio = parseInt(ratioArr[0]);
+            const waterRatio = parseInt(ratioArr[1]);
+            const coffeeAmountGrams = coffeeAmount * coffeeRatio;
+            const waterAmountGrams = coffeeAmount * waterRatio;
+            const milkAmountGrams = (coffeeAmount * waterRatio) / 2;
+
+            document.querySelector("#coffeeAmountResult").value = coffeeAmountGrams;
+            document.querySelector("#waterAmountResult").value = waterAmountGrams;
+            document.querySelector("#milkAmountResult").value = milkAmountGrams;
+        });
+    </script>
