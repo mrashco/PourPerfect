@@ -10,10 +10,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="light-mode">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" id="dark-mode-toggle">
+            <span class="icon">
+              <i class="fas fa-moon"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
     <section class="section">
         <div class="container">
-            <h1 class="title">Pour Perfect Coffee Calculator</h1>
+            <h1 class="title">Pour Perfect</h1>
+            <h2 class="subtitle">The Pour-Over Coffee Calculator</h2>
             <p class="content">PourPerfect is an app that helps coffee enthusiasts achieve the perfect pour-over. It provides a step-by-step guide and a timer to ensure the correct amount of water is added at the right pace for the best tasting coffee. It also has a calculator to help users determine the correct coffee to water ratio for their preferred strength.</p>
             <div class="field">
                 <label class="label">Coffee to Water Ratio<div class="tooltip"><span class="icon"><i class="fas fa-info-circle"></i></span><span class="tooltiptext">Format e.g. 1:10</span></div></label>
@@ -52,9 +62,7 @@
                 </div>
             </div>
         </div>
-        <script src="app.js"></script>
-
-        <section class="section">
+        <hr>
             <div class="container">
               <h2 class="subtitle">Pour Over Coffee Guide</h2>
               <ul class="list">
@@ -88,5 +96,7 @@
                 </li>
               </ul>
             </div>
-          </section>
     </section>
+    <script src="app.js"></script>
+    </body>
+    </html>

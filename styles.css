@@ -1,3 +1,47 @@
+:root {
+  --primary: #007bff;
+  --link: #007bff;
+  --info: #17a2b8;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --background: #fff;
+  --text: #212529;
+  --light-gray: #f8f9fa;
+  --dark-gray: #6c757d;
+  --black: #000;
+  --white: #fff;
+}
+
+.light-mode {
+  --primary: #007bff;
+  --link: #007bff;
+  --info: #17a2b8;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --background: #fff;
+  --text: #212529;
+  --light-gray: #f8f9fa;
+  --dark-gray: #6c757d;
+  --black: #000;
+  --white: #fff;
+}
+
+.dark-mode {
+  --primary: #6c757d;
+  --link: #6c757d;
+  --info: #6c757d;
+  --success: #9ccc65;
+  --warning: #ffeb3b;
+  --danger: #ff5722;
+  --background: #343a40;
+  --text: #fff;
+  --light-gray: #6c757d;
+  --dark-gray: #f8f9fa;
+  --black: #fff;
+  --white: #000;
+}
 
   /* Tooltip container */
   .tooltip {

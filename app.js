@@ -1,4 +1,4 @@
-// App.js
+// Conversion
 const calculateBtn = document.querySelector("#calculateBtn");
 calculateBtn.addEventListener("click", () => {
     const ratio = document.querySelector("#ratio").value;
@@ -13,4 +13,12 @@ calculateBtn.addEventListener("click", () => {
     document.querySelector("#coffeeAmountResult").value = coffeeAmountGrams;
     document.querySelector("#waterAmountResult").value = waterAmountGrams;
     document.querySelector("#milkAmountResult").value = milkAmountGrams;
+});
+
+
+// Dark mode
+const toggle = document.querySelector('#dark-mode-toggle');
+
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
 });
