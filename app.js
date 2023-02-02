@@ -1,3 +1,4 @@
+// App.js
 const calculateBtn = document.querySelector("#calculateBtn");
 calculateBtn.addEventListener("click", () => {
     const ratio = document.querySelector("#ratio").value;
