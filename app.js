@@ -33,23 +33,55 @@ let resetBtn = document.querySelector("#resetBtn");
 
 let timerInterval;
 let time = 0;
+let isRunning = false;
 
 startBtn.addEventListener("click", startTimer);
 pauseBtn.addEventListener("click", pauseTimer);
 resetBtn.addEventListener("click", resetTimer);
 
 function startTimer() {
+  isRunning = true;
+  startBtn.style.display = "none";
+  pauseBtn.style.display = "inline-block";
+  
   timerInterval = setInterval(function () {
     time++;
     timerDisplay.value = time;
   }, 1000);
+
+  // Setting the timerInterval to run every 1 millisecond and increment the time variable
+  // timerInterval = setInterval(function () {
+  //   time++;
+    // Calculating the minutes, seconds, and milliseconds
+
+    // let res = Math.floor(time / 1000);
+    // let milliseconds = time.toString().substr(-3);
+    // let seconds = res % 60;
+    // let minutes = (res - seconds) / 60;
+
+    // let minutes = Math.floor(time / 60 / 1000);
+    // let seconds = Math.floor(time / 1000) % 60;
+    // let milliseconds = time % 1000;
+
+    // Formatting the time in the format of minutes:seconds:milliseconds
+    // let formattedTime = `${minutes}:${seconds}:${milliseconds}`;
+    // Updating the timer display with the formatted time
+    // timerDisplay.value = formattedTime;
+  // }, 1);
 }
 
+
 function pauseTimer() {
+  isRunning = false;
+  startBtn.style.display = "inline-block";
+  pauseBtn.style.display = "none";
   clearInterval(timerInterval);
 }
 
 function resetTimer() {
+  isRunning = false;
+  startBtn.style.display = "inline-block";
+  pauseBtn.style.display = "none";
   clearInterval(timerInterval);
   time = 0;
   timerDisplay.value = time;
