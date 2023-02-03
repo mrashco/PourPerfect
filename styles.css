@@ -73,3 +73,16 @@
     visibility: visible;
     opacity: 1;
   }
+
+
+  /* TIMER */
+  .timer {
+    position: fixed;
+    width: 135px;
+    bottom: 5%;
+    right: 5%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 7.5px;
+    box-shadow: 0px -10px 100px rgb(180, 180, 180);
+  }
